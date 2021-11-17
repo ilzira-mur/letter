@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>HTML Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<style>
+	<style type="text/css">
 		body {
 			width: 100% !important;
 			-webkit-text-size-adjust: 100%;
@@ -61,10 +61,7 @@
 		}
 
 		.td-box {
-			display: flex;
-			flex-direction: row;
 			min-height: 76px;
-
 		}
 
 		.table-info {
@@ -74,15 +71,17 @@
 
 		.column {
 			margin: 0;
-			width:100%;
-			max-width:185px;
-			display:inline-block;
-			vertical-align:top;
+			width: 100%;
+			max-width: 185px;
+			display: inline-block;
+			vertical-align: top;
 		}
 
 		.column-text {
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: 14px;
+			margin-top: auto;
+			margin-bottom: auto;
 		}
 
 		.img-icon {
@@ -104,6 +103,14 @@
 			margin-bottom: 40px;
 		}
 
+		.text-italic {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			font-style: italic;
+			margin-bottom: 30px;
+			margin-top: 0;
+		}
+
 		@media (max-width: 425px) {
 			.table-600 {
 				width: 425px !important;
@@ -118,6 +125,7 @@
 
 			.column {
 				max-width: 300px !important;
+				align-items: center;
 			}
 
 			.table-info {
@@ -137,7 +145,7 @@
 </head>
 
 <body style="margin: 0; padding: 0;">
-	<div style="font-size:0px;opacity:0;visibility:hidden;width:0;height:0;display:none;">Тестовое письмо</div>
+	<div style="font-size:0px; opacity:0; visibility:hidden; width:0; height:0; display:none;">Тестовое письмо</div>
 	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
 		<tr>
 			<td>
@@ -145,13 +153,13 @@
 					<tr>
 						<td class="banner">
 							<a href="https://www.sima-land.ru/posuda/" target="_blanck">
-								<img src="./bnr.png" alt="banner"/>
+								<img src="./bnr.png" alt="bnr"/>
 							</a>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<p class="td-text" align="center">Огромный выбор посуды и кухонных принадлежностей <br>всегда в наличии на нашем сайте.</p>
+							<p class="td-text" align="center">Огромный выбор посуды и кухонных принадлежностей <br /> всегда в наличии на нашем сайте.</p>
 							<h1 class="td-header" style="font-family: Arial, Helvetica, sans-serif" align="center">Наши преимущества</h1>
 						</td>
 					</tr>
@@ -160,42 +168,36 @@
 							<table class="td-line" cellpadding="0" cellspacing="0" width="100%" align="center">
 								<tr>
 									<td class="column-line">
-										<div class="column">
-											<table class="table-info" cellpadding="0" cellspacing="0" align="center">
-												<tr>
-													<td class="td-box" align="left">
-														<img class="img-icon" src="./icon-items.png" alt="items" />
-														<a class="link" href="https://www.sima-land.ru/tovary-s-lyubimymi-geroyami/" target="_blanck">
-														<p class="column-text">Больше 750 000<br>товаров для дома,<br>работы и отдыха</p>
-														</a>
-													</td>
-												</tr>
-											</table>
-										</div>
-										<div class="column">
-											<table class="table-info" cellpadding="0" cellspacing="0" align="center">
-												<tr>
-													<td class="td-box" align="left">
-														<img class="img-icon" src="./icon-percent.png" alt="percent" />
-														<a class="link" href="https://www.sima-land.ru/offers/?f=%7B%22type%22%3A%5B%22volume-discount%22%5D%7D" target="_blanck">
-														<p class="column-text">Скидки на крупные<br>заказы*</p>
-														</a>
-													</td>
-												</tr>
-											</table>
-										</div>
-										<div class="column">
-											<table class="table-info" cellpadding="0" cellspacing="0" align="center">
-												<tr>
-													<td class="td-box" align="left">
-														<img class="img-icon" src="./icon-selfmade.png" alt="selfmade" />
-														<a class="link" href="https://www.sima-land.ru/nashi-razrabotki/" target="_blanck">
-														<p class="column-text">Продукция<br>собственной<br>разработки</p>
-														</a>
-													</td>
-												</tr>
-											</table>
-										</div>
+										<table class="column table-info" cellpadding="0" cellspacing="0" align="center">
+											<tr style="max-width: fit-content;">
+												<td class="td-box" align="left">
+													<img class="img-icon" src="./icon-items.png" alt="items" />
+												</td>
+												<td>
+													<a class="link column-text" href="https://www.sima-land.ru/tovary-s-lyubimymi-geroyami/" target="_blanck">Больше 750 000 <br /> товаров для дома, <br /> работы и отдыха</a>
+												</td>
+											</tr>
+										</table>
+										<table class="column table-info" cellpadding="0" cellspacing="0" align="center">
+											<tr style="max-width: fit-content;">
+												<td class="td-box" align="left">
+													<img class="img-icon" src="./icon-percent.png" alt="percent" />
+												</td>
+												<td>
+													<a class="link column-text" href="https://www.sima-land.ru/offers/?f=%7B%22type%22%3A%5B%22volume-discount%22%5D%7D" target="_blanck">Скидки на крупные <br /> заказы*</a>
+												</td>
+											</tr>
+										</table>
+										<table class="column table-info" cellpadding="0" cellspacing="0" align="center">
+											<tr style="max-width: fit-content;">
+												<td class="td-box" align="left">
+													<img class="img-icon" src="./icon-selfmade.png" alt="selfmade" />
+												</td>
+												<td>
+													<a class="link column-text" href="https://www.sima-land.ru/nashi-razrabotki/" target="_blanck">Продукция <br /> собственной <br /> разработки</a>
+												</td>
+											</tr>
+										</table>
 									</td>
 								</tr>
 							</table>
@@ -206,45 +208,41 @@
 							<table class="td-line" cellpadding="0" cellspacing="0" width="100%" align="center">
 								<tr>
 									<td class="column-line">
-										<div class="column">
-											<table class="table-info" cellpadding="0" cellspacing="0" align="center">
-												<tr>
-													<td class="td-box" align="left">
-														<img class="img-icon" src="./icon-payment.png" alt="payment" />
-														<a class="link" href="https://www.sima-land.ru/info/oplata/" target="_blanck">
-														<p class="column-text">Удобные<br>формы оплаты</p>
-														</a>
-													</td>
-												</tr>
-											</table>
-										</div>
-										<div class="column">
-											<table class="table-info" cellpadding="0" cellspacing="0" align="center">
-												<tr>
-													<td class="td-box" align="left">
-														<img class="img-icon" src="./icon-delivery.png" alt="delivery" />
-														<a class="link" href="https://www.sima-land.ru/info/delivery/" target="_blanck">
-														<p class="column-text">Доставка<br>в 2 000 городов</p>
-														</a>
-													</td>
-												</tr>
-											</table>
-										</div>
-										<div class="column">
-											<table class="table-info" cellpadding="0" cellspacing="0" align="center">
-												<tr>
-													<td class="td-box" align="left">
-														<img class="img-icon" src="./icon-doc.png" alt="doc" />
-														<a class="link" href="https://www.sima-land.ru/info/dogovor/" target="_blanck">
-														<p class="column-text">Работа<br>по договору</p>
-														</a>
-													</td>
-												</tr>
-											</table>
-										</div>
+										<table class="column table-info" cellpadding="0" cellspacing="0" align="center">
+											<tr style="max-width: fit-content;">
+												<td class="td-box" align="left">
+													<img class="img-icon" src="./icon-payment.png" alt="payment" />
+												</td>
+												<td>
+													<a class="link column-text" href="https://www.sima-land.ru/info/oplata/" target="_blanck">Удобные <br /> формы оплаты</a>
+												</td>
+											</tr>
+										</table>
+										<table class="column table-info" cellpadding="0" cellspacing="0" align="center">
+											<tr style="max-width: fit-content;">
+												<td class="td-box" align="left">
+													<img class="img-icon" src="./icon-delivery.png" alt="delivery" />
+												</td>
+												<td>
+													<a class="link column-text" href="https://www.sima-land.ru/info/delivery/" target="_blanck">Доставка <br /> в 2 000 городов</a>
+												</td>
+											</tr>
+										</table>
+										<table class="column table-info" cellpadding="0" cellspacing="0" align="center">
+											<tr style="max-width: fit-content;">
+												<td class="td-box" align="left">
+													<img class="img-icon" src="./icon-doc.png" alt="doc" />
+												</td>
+												<td>
+													<a class="link column-text" href="https://www.sima-land.ru/info/dogovor/" target="_blanck">Работа <br /> по договору</a>
+												</td>
+											</tr>
+										</table>
 									</td>
 								</tr>
 							</table>
+						</td>
+					</tr>
 					<tr>
 						<td align="center">
 							<a class="link" href="https://www.sima-land.ru/info/" target="_blanck">
@@ -254,7 +252,7 @@
 					</tr>
 					<tr>
 						<td align="center">
-							<p style="font-style: italic; margin-bottom: 30px; margin-top: 0;">* Более подробную информацию вы можете получить у менеджера.</p>
+							<p class="text-italic">* Более подробную информацию вы можете получить у менеджера.</p>
 						</td>
 					</tr>
 					<tr>
@@ -292,6 +290,7 @@
 							</a>
 						</td>
 					</tr>
+				</table>
 			</td>
 		</tr>
 	</table>
