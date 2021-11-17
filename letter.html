@@ -36,6 +36,10 @@
 			border-collapse: collapse;
 		}
 
+		.table-600 {
+			width: 600px;
+		}
+
 		.link {
 			text-decoration: none;
 			color: black;
@@ -100,6 +104,35 @@
 			margin-bottom: 40px;
 		}
 
+		@media (max-width: 425px) {
+			.table-600 {
+				width: 425px !important;
+			}
+
+			.td-line {
+				display: flex !important;
+				flex-direction: column !important;
+				max-width: 300px !important;
+				margin-bottom: 0 !important;
+			}
+
+			.column {
+				max-width: 300px !important;
+			}
+
+			.table-info {
+				margin-left: auto !important;
+				margin-right: auto !important;
+				width: 185px !important;
+			}
+        }
+
+		@media (max-width: 320px) {
+			.table-600 {
+				width: 320px !important;
+			}
+		}
+
 	</style>
 </head>
 
@@ -108,7 +141,7 @@
 	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
 		<tr>
 			<td>
-				<table class="main table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+				<table class="table-600" cellpadding="0" cellspacing="0" align="center">
 					<tr>
 						<td class="banner">
 							<a href="https://www.sima-land.ru/posuda/" target="_blanck">
